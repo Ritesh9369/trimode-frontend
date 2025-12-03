@@ -1,0 +1,66 @@
+@import "remixicon/fonts/remixicon.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Footer Title */
+.footer-title {
+  @apply text-white font-semibold text-lg mb-3 relative;
+}
+
+/* 🔴 Red underline under headings */
+.underline-red::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 42px;
+  height: 3px;
+  background: #d93636;
+  border-radius: 6px;
+}
+
+/* Footer List */
+.footer-list li {
+  @apply text-gray-300 text-sm mb-2 cursor-pointer transition-all duration-200;
+}
+.footer-list li:hover {
+  @apply text-white pl-1;
+}
+
+/* Social Icons */
+.footer-icon {
+  @apply text-2xl text-gray-300 transition transform cursor-pointer;
+}
+.footer-icon:hover {
+  @apply text-white scale-110;
+}
+/* Button Ripple Effect */
+.ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 0, 0, 0.6);
+  display: block;
+  border-radius: 50%;
+  transform: scale(0);
+  opacity: 1;
+  pointer-events: none;
+  animation: rippleEffect 0.6s linear;
+}
+
+@keyframes rippleEffect {
+  to {
+    transform: scale(60);
+    opacity: 0;
+  }
+}
+.inputBox {
+  @apply w-full border px-4 py-3 rounded-md focus:ring-2 focus:ring-red-500 outline-none transition;
+}
