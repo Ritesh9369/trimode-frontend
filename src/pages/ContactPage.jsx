@@ -12,19 +12,27 @@ AOS.init({ duration: 900, once: true });
 
 const ContactPage = () => {
   return (
-    <main className="pt-[110px] bg-white">
+    <main className="bg-white">
+      {/* 🔹 NAVBAR BOTTOM WHITE CLEAN SEPARATOR */}
+      <div className="h-[20px] w-full bg-white border-b border-gray-200"></div>
+
       {/* 🔥 HERO BANNER */}
       <section
-        className="w-full h-[430px] bg-cover bg-center flex items-center pl-[6%] relative border-b-4 border-red-500"
+        className="w-full h-[430px] bg-cover bg-center flex items-center pl-[6%] relative shadow-lg"
         style={{ backgroundImage: `url(${banner})` }}
         data-aos="fade-up"
       >
-        <div className="absolute inset-0 bg-black/40"></div>
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/45"></div>
+
+        {/* Text */}
         <div className="relative z-10">
-          <h1 className="text-white text-4xl md:text-5xl font-extrabold mb-2">
+          <h1 className="text-white text-4xl md:text-5xl font-extrabold mb-3 drop-shadow-lg">
             Contact us
           </h1>
-          <p className="text-white/90 text-lg">Home &gt; Contact us</p>
+          <p className="text-white/90 text-lg tracking-wide">
+            Home &gt; Contact us
+          </p>
         </div>
       </section>
 
@@ -34,8 +42,10 @@ const ContactPage = () => {
         data-aos="fade-up"
       >
         {/* FORM */}
-        <div className="bg-white p-10 shadow-lg rounded-2xl border border-gray-200">
-          <h2 className="text-2xl font-bold mb-8">Get A Quote</h2>
+        <div className="bg-white p-10 shadow-xl rounded-2xl border border-gray-100">
+          <h2 className="text-2xl font-extrabold mb-8 text-gray-900">
+            Get A Quote
+          </h2>
 
           <form className="space-y-5">
             <input
@@ -65,21 +75,20 @@ const ContactPage = () => {
 
             <button
               type="submit"
-              className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-md font-semibold transition"
+              className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-md font-semibold transition"
             >
               Submit →
             </button>
           </form>
         </div>
 
-        {/* CONTACT INFORMATION (RIGHT BOX) */}
+        {/* CONTACT INFORMATION */}
         <div
-          className="p-10 rounded-2xl shadow-xl text-white bg-cover bg-center relative overflow-hidden"
+          className="p-10 rounded-2xl shadow-lg text-white bg-cover bg-center relative overflow-hidden"
           style={{ backgroundImage: `url(${infoBg})` }}
           data-aos="fade-left"
         >
-          {/* DARK OVERLAY */}
-          <div className="absolute inset-0 bg-black/55"></div>
+          <div className="absolute inset-0 bg-black/45"></div>
 
           <div className="relative z-10">
             <h2 className="text-3xl font-extrabold mb-8">
@@ -112,23 +121,26 @@ const ContactPage = () => {
       <section data-aos="fade-up" className="w-full py-10">
         <img
           src={map}
-          className="w-full h-[450px] object-cover rounded-xl shadow-lg"
+          className="w-full h-[450px] object-cover rounded-xl shadow-xl"
+          alt="Google Map"
         />
       </section>
     </main>
   );
 };
 
-/* 🔥 Info Card — White box exactly like Figma */
+/* 🔥 Info Card Reusable */
 const InfoCard = ({ icon, title, subtitle, subtitle2 }) => (
-  <div className="bg-white text-black rounded-xl p-6 flex gap-5 mb-6 items-start shadow-xl">
+  <div className="bg-white text-black rounded-xl p-6 flex gap-5 mb-6 items-start shadow-md">
     <div className="bg-red-500 p-3 rounded-md shadow-md">
-      <img src={icon} className="w-7 h-7" />
+      <img src={icon} className="w-7 h-7" alt="" />
     </div>
     <div>
       <h4 className="font-bold text-lg mb-1">{title}</h4>
-      <p className="text-sm leading-relaxed">{subtitle}</p>
-      {subtitle2 && <p className="text-sm leading-relaxed">{subtitle2}</p>}
+      <p className="text-sm text-gray-700 leading-relaxed">{subtitle}</p>
+      {subtitle2 && (
+        <p className="text-sm text-gray-700 leading-relaxed">{subtitle2}</p>
+      )}
     </div>
   </div>
 );

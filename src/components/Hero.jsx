@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import hero1 from "../assets/hero/hero-bg-1.png";
-import hero2 from "../assets/hero/hero-bg-2.png";
-import hero3 from "../assets/hero/hero-bg-3.png";
-import hero4 from "../assets/hero/hero-bg-4.png";
-import hero5 from "../assets/hero/hero-bg-5.png";
+
+import hero2 from "../assets/hero/hero-bg-7.png";
+import hero1 from "../assets/hero/hero-bg-3.png";
+
 
 const Hero = () => {
-  const images = [hero1, hero2, hero3, hero4, hero5];
+  
+  const images = [hero1, hero2];
   const [index, setIndex] = useState(0);
   const [fade, setFade] = useState(false);
 

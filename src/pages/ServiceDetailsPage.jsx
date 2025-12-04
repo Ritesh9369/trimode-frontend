@@ -1,4 +1,3 @@
-// src/pages/ServiceDetailsPage.jsx
 import { useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -41,23 +40,30 @@ const ServiceDetailsPage = () => {
   ];
 
   return (
-    <main className="pt-[110px]">
-      {/* ================= HERO SECTION ================= */}
+    <main className="bg-white">
+      {/* 🔹 NAVBAR BOTTOM CLEAN GAP */}
+      <div className="h-[20px] w-full bg-white border-b border-gray-200"></div>
+
+      {/* ⭐ HERO BANNER */}
       <section
-        className="w-full h-[420px] bg-cover bg-center flex items-center pl-[6%] relative"
+        className="w-full h-[430px] bg-cover bg-center flex items-center pl-[6%] relative shadow-lg"
         style={{ backgroundImage: `url(${banner})` }}
         data-aos="fade-up"
       >
+        {/* Overlay */}
         <div className="absolute inset-0 bg-black/45"></div>
+
         <div className="relative z-10">
-          <h1 className="text-white text-4xl md:text-5xl font-extrabold mb-2">
+          <h1 className="text-white text-4xl md:text-5xl font-extrabold mb-3 drop-shadow-xl">
             Warehousing & Inventory Management
           </h1>
-          <p className="text-white/90 text-lg">Home &gt; Our Services</p>
+          <p className="text-white/90 text-lg tracking-wide">
+            Home &gt; Our Services
+          </p>
         </div>
       </section>
 
-      {/* ================= OVERVIEW SECTION ================= */}
+      {/* ⭐ OVERVIEW SECTION */}
       <section
         className="max-w-7xl mx-auto px-5 py-20 grid md:grid-cols-2 gap-12 items-center"
         data-aos="fade-up"
@@ -86,16 +92,16 @@ const ServiceDetailsPage = () => {
         </div>
       </section>
 
-      {/* ================= WHAT WE OFFER ================= */}
+      {/* ⭐ WHAT WE OFFER SECTION */}
       <section
         className="relative bg-cover bg-center py-24 text-white"
         style={{ backgroundImage: `url(${banner})` }}
         data-aos="fade-up"
       >
-        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="absolute inset-0 bg-black/75"></div>
 
         <div className="relative max-w-6xl mx-auto px-5 text-center">
-          <p className="text-red-400 font-semibold">What We Offer</p>
+          <p className="text-red-400 font-semibold uppercase">What We Offer</p>
           <h2 className="text-3xl md:text-4xl font-bold mb-14">
             The Trimode Shipping Advantage
           </h2>
@@ -109,9 +115,11 @@ const ServiceDetailsPage = () => {
         </div>
       </section>
 
-      {/* ================= FAQ SECTION ================= */}
+      {/* ⭐ FAQ SECTION */}
       <section className="max-w-5xl mx-auto px-5 py-24" data-aos="fade-up">
-        <p className="text-center text-red-500 font-semibold mb-2">FAQ’s</p>
+        <p className="text-center text-red-500 font-semibold mb-2 uppercase">
+          FAQ’s
+        </p>
         <h2 className="text-center text-3xl md:text-4xl font-bold mb-10">
           Your Questions About Our Warehousing Solutions
         </h2>
@@ -141,7 +149,7 @@ const ServiceDetailsPage = () => {
   );
 };
 
-// ⭐ GRID CARD COMPONENT
+/* ⭐ GRID CARD COMPONENT */
 const ServiceGridCard = ({ icon, title }) => (
   <div
     className="text-center hover:-translate-y-2 transition duration-300"

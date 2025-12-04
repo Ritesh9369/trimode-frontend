@@ -1,55 +1,57 @@
 import aboutShip from "../assets/aboutmain/about-ship.png";
+import tracingIcon1 from "../assets/aboutmain/tracing-icon1.png";
+import tracingIcon2 from "../assets/aboutmain/tracing-icon2.png";
+import experienceBadge from "../assets/aboutmain/experience-badge.png";
 
 const AboutSection = () => {
   return (
-    <section className="bg-white py-16">
-      <div className="max-w-6xl mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-10 items-center">
-        {/* Left content */}
+    <section className="bg-white py-20">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 grid md:grid-cols-2 gap-14 items-center">
+        {/* Left side */}
         <div>
-          <p className="text-red-500 font-semibold mb-2 uppercase tracking-wide">
+          <p className="text-red-600 font-semibold mb-3 uppercase tracking-wide">
             About Trimode Shipping
           </p>
 
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold text-gray-900 leading-snug mb-6">
             Digital &amp; Trusted Transport <br /> Logistic Company
           </h2>
 
-          <p className="text-gray-600 mb-6">
+          <p className="text-gray-600 mb-10 leading-relaxed">
             We provide digital-first logistics solutions with advanced supply
-            chain visibility, real-time tracking, and dedicated support. Whether
-            it’s land, sea, or air freight, we make sure your cargo reaches
-            safely and on time.
+            chain visibility, real-time tracking, and dedicated support.
           </p>
 
-          {/* Feature cards */}
-          <div className="grid sm:grid-cols-2 gap-4 mb-6">
-            <div className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition">
-              <h3 className="font-semibold mb-1">On-time Delivery</h3>
-              <p className="text-sm text-gray-600">
-                Reliable schedules and optimized routing for every shipment.
-              </p>
+          {/* Feature Blocks */}
+          <div className="grid sm:grid-cols-2 gap-8 mb-10">
+            {/* Block 1 */}
+            <div className="flex gap-4">
+              <img
+                src={tracingIcon1}
+                className="w-12 h-12"
+                alt="Online Tracing"
+              />
+              <div>
+                <h3 className="font-semibold text-red-600">Online Tracing</h3>
+                <p className="text-gray-600 text-sm">
+                  The is a long established fact that a reader.
+                </p>
+              </div>
             </div>
 
-            <div className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition">
-              <h3 className="font-semibold mb-1">Global Coverage</h3>
-              <p className="text-sm text-gray-600">
-                Integrated land, sea, and air logistics across major trade
-                lanes.
-              </p>
-            </div>
-
-            <div className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition">
-              <h3 className="font-semibold mb-1">Smart Tracking</h3>
-              <p className="text-sm text-gray-600">
-                Live cargo visibility with digital dashboards and alerts.
-              </p>
-            </div>
-
-            <div className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition">
-              <h3 className="font-semibold mb-1">24/7 Support</h3>
-              <p className="text-sm text-gray-600">
-                Dedicated experts available round the clock for your business.
-              </p>
+            {/* Block 2 */}
+            <div className="flex gap-4">
+              <img
+                src={tracingIcon1}
+                className="w-12 h-12"
+                alt="Online Tracing"
+              />
+              <div>
+                <h3 className="font-semibold text-red-600">Online Tracing</h3>
+                <p className="text-gray-600 text-sm">
+                  The is a long established fact that a reader.
+                </p>
+              </div>
             </div>
           </div>
 
@@ -58,12 +60,19 @@ const AboutSection = () => {
           </button>
         </div>
 
-        {/* Right image */}
+        {/* Right Image */}
         <div className="relative">
+          {/* Badge */}
+          <img
+            src={experienceBadge}
+            className="absolute top-6 right-6 w-32"
+            alt="25 Years of Experience"
+          />
+
           <img
             src={aboutShip}
             alt="Ship logistics"
-            className="w-full rounded-lg shadow-lg object-cover"
+            className="w-full rounded-xl shadow-xl border-b-[4px] border-red-500 object-cover"
           />
         </div>
       </div>
