@@ -1,33 +1,33 @@
 import { Link } from "react-router-dom";
-import service1 from "../assets/service-1.png";
-import service2 from "../assets/service-2.png";
-import service3 from "../assets/service-3.png";
-import service4 from "../assets/service-4.png";
+import service1 from "../assets/servicesmain/service-1.png";
+import service2 from "../assets/servicesmain/service-2.png";
+import service3 from "../assets/servicesmain/service-3.png";
+import service4 from "../assets/servicesmain/service-4.png";
 
 const services = [
   {
     title: "Freight Transportation",
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
+    desc: "Safe and fast freight transport to deliver goods globally using road, air & sea networks.",
     image: service1,
-    link: "/services" // abhi details page nahi hai
+    link: "/services"
   },
   {
     title: "Warehousing & Inventory Management",
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
+    desc: "High-security storage, smart distribution & real-time inventory tracking for enterprises.",
     image: service2,
-    link: "/services/warehousing" // ⭐ details page exists
+    link: "/services/warehousing"
   },
   {
     title: "Custom Logistics Solutions",
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
+    desc: "Personalized supply-chain strategies to optimize logistics efficiency for businesses.",
     image: service3,
-    link: "/services" // abhi details page nahi hai
+    link: "/services"
   },
   {
     title: "Last-Mile Delivery",
-    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
+    desc: "Fast and reliable last-mile delivery with real-time tracking and doorstep drop-offs.",
     image: service4,
-    link: "/services" // abhi details page nahi hai
+    link: "/services"
   }
 ];
 
@@ -35,30 +35,43 @@ const ServicesSection = () => {
   return (
     <section className="bg-[#231F20] text-white py-20">
       <div className="max-w-7xl mx-auto px-6">
+        {/* Heading */}
         <h3 className="text-red-500 font-medium uppercase mb-2">
           Services We Offer
         </h3>
-        <h2 className="text-4xl font-bold mb-10">
+        <h2 className="text-4xl font-bold mb-14 max-w-3xl leading-tight">
           World’s Leading Contract Logistics Provider.
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service, index) => (
-            <Link to={service.link} key={index}>
-              <div className="bg-white text-black rounded-md shadow hover:-translate-y-2 transition-all duration-300 cursor-pointer">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full h-48 object-cover rounded-t-md"
-                />
-                <div className="p-5">
-                  <h3 className="text-lg font-semibold mb-2">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed mb-4">
+        {/* Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {services.map((service, idx) => (
+            <Link to={service.link} key={idx}>
+              <div
+                className="bg-white text-black rounded-xl shadow-xl overflow-hidden group 
+                transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl cursor-pointer 
+                flex flex-col h-full"
+              >
+                {/* Image */}
+                <div className="overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-48 object-cover transition-transform duration-700 
+                    group-hover:scale-110"
+                  />
+                </div>
+
+                {/* Content */}
+                <div className="p-6 flex flex-col flex-grow">
+                  <h3 className="text-lg font-bold mb-2">{service.title}</h3>
+
+                  <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-grow">
                     {service.desc}
                   </p>
-                  <button className="text-red-600 font-medium hover:underline">
+
+                  {/* Button bottom align */}
+                  <button className="text-red-600 font-medium group-hover:underline transition mt-auto">
                     Read More →
                   </button>
                 </div>

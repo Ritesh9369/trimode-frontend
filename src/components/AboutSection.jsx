@@ -1,4 +1,4 @@
-import aboutShip from "../assets/about-ship.png";
+import aboutShip from "../assets/aboutmain/about-ship.png";
 
 const AboutSection = () => {
   return (

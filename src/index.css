@@ -3,12 +3,19 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 🔥 Remove horizontal scroll from whole website */
+html,
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
 /* Footer Title */
 .footer-title {
   @apply text-white font-semibold text-lg mb-3 relative;
 }
 
-/* 🔴 Red underline under headings */
+/* 🔴 Red underline under footer headings */
 .underline-red::after {
   content: "";
   position: absolute;
@@ -20,7 +27,7 @@
   border-radius: 6px;
 }
 
-/* Footer List */
+/* Footer List Items */
 .footer-list li {
   @apply text-gray-300 text-sm mb-2 cursor-pointer transition-all duration-200;
 }
@@ -28,19 +35,19 @@
   @apply text-white pl-1;
 }
 
-/* Social Icons */
+/* Footer Social Icons */
 .footer-icon {
   @apply text-2xl text-gray-300 transition transform cursor-pointer;
 }
 .footer-icon:hover {
   @apply text-white scale-110;
 }
+
 /* Button Ripple Effect */
 .ripple {
   position: relative;
   overflow: hidden;
 }
-
 .ripple::after {
   content: "";
   position: absolute;
@@ -54,13 +61,75 @@
   pointer-events: none;
   animation: rippleEffect 0.6s linear;
 }
-
 @keyframes rippleEffect {
   to {
     transform: scale(60);
     opacity: 0;
   }
 }
+
+/* Input Box (for contact form, login, etc.) */
 .inputBox {
   @apply w-full border px-4 py-3 rounded-md focus:ring-2 focus:ring-red-500 outline-none transition;
+}
+
+/* =============================== */
+/* 🚀 Animated Hamburger Button — FINAL VERSION */
+/* =============================== */
+/* =============================== */
+/* 🚀 Animated Hamburger Button — FINAL VERSION */
+/* =============================== */
+/* =============================== */
+/* 🚀 Animated Hamburger Button — FINAL VERSION */
+/* =============================== */
+.hamburger {
+  width: 26px;
+  height: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Lines of hamburger */
+.hamburger span {
+  width: 100%;
+  height: 3px;
+  background: #ffffff;  /* lines white */
+  border-radius: 10px;
+  transition: 0.35s ease;
+}
+
+/* Open state -> cross (still white) */
+.hamburger.open span {
+  background: #ffffff;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+/* =============================== */
+/* 🚀 Simple Hamburger Lines       */
+/* =============================== */
+.hamburger {
+  width: 22px;
+  height: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 2px;
+  background: #ffffff; /* black button ke upar white lines */
+  border-radius: 999px;
+  transition: 0.25s ease;
 }

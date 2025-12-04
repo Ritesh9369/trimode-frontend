@@ -1,5 +1,5 @@
-import logo from "../assets/logo.png";
-import bg from "../assets/footer-bg.png";
+import logo from "../assets/footerimg/logo2.png";
+import bg from "../assets/footerimg/footer-bg.png";
 
 const Footer = () => {
   return (
