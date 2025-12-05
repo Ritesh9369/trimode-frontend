@@ -19,7 +19,12 @@ export default function Navbar() {
     setIsOpen(false);
   }, [location]);
 
-  // Scroll hide / show navbar
+  // ⬆ Scroll to top on route change (NEW)
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
+  // Hide/Show navbar on scroll
   useEffect(() => {
     function handleScroll() {
       const currentScroll = window.scrollY;
@@ -34,7 +39,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Click outside drawer => close
+  // Click outside drawer
   useEffect(() => {
     function handleClick(e) {
       if (menuRef.current && !menuRef.current.contains(e.target)) {
@@ -113,16 +118,14 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* 🔥 Mobile Hamburger / Close (X) Button */}
+        {/* Mobile Hamburger / Close (X) */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden w-10 h-10 flex items-center justify-center rounded-md bg-black active:scale-95 transition"
         >
           {isOpen ? (
-            // X icon when open
             <i className="ri-close-line text-white text-2xl leading-none" />
           ) : (
-            // 3-line hamburger when closed
             <div className="hamburger">
               <span />
               <span />
@@ -139,7 +142,6 @@ export default function Navbar() {
           isOpen ? "translate-x-0" : "translate-x-[100%]"
         }`}
       >
-        {/* All nav links - white text */}
         {navItems.map((item) => (
           <Link
             key={item.name}
@@ -151,7 +153,7 @@ export default function Navbar() {
           </Link>
         ))}
 
-        {/* Phone inside drawer - also white */}
+        {/* Phone */}
         <a
           href="tel:+919874561233"
           className="flex items-center gap-3 pt-3 text-white"
