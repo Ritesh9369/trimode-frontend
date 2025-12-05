@@ -1,7 +1,7 @@
-import aboutShip from "../assets/aboutmain/about-ship.png";
-import tracingIcon1 from "../assets/aboutmain/tracing-icon1.png";
-import tracingIcon2 from "../assets/aboutmain/tracing-icon2.png";
-import experienceBadge from "../assets/aboutmain/experience-badge.png";
+import aboutShip from "../../assets/aboutmain/about-ship.png";
+import tracingIcon1 from "../../assets/aboutmain/tracing-icon1.png";
+
+import experienceBadge from "../../assets/aboutmain/experience-badge.png";
 
 const AboutSection = () => {
   return (

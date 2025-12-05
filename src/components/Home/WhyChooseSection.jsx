@@ -1,10 +1,10 @@
-import containerImg from "../assets/strength/strength-container.png";
-import iconReliability from "../assets/strength/icon-reliability.png";
-import iconQuality from "../assets/strength/icon-quality.png";
-import iconExpertise from "../assets/strength/icon-expertise.png";
-import iconSupport from "../assets/strength/icon-support.png";
+import containerImg from "../../assets/strength/strength-container.png";
+import iconReliability from "../../assets/strength/icon-reliability.png";
+import iconQuality from "../../assets/strength/icon-quality.png";
+import iconExpertise from "../../assets/strength/icon-expertise.png";
+import iconSupport from "../../assets/strength/icon-support.png";
 
-const HomeWhyChoose = () => {
+const WhyChooseSection = () => {
   return (
     <section className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-10 items-center">
       {/* LEFT IMAGE */}
@@ -61,4 +61,4 @@ const StrengthItem = ({ icon, title, desc, active }) => (
   </div>
 );
 
-export default HomeWhyChoose;
+export default WhyChooseSection;

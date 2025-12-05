@@ -1,21 +1,23 @@
-import Hero from "../components/Hero";
-import AboutSection from "../components/AboutSection";
-import ServicesSection from "../components/ServicesSection";
-import HomeWhyChoose from "../components/HomeWhyChoose";
-import CertificationsSection from "../components/CertificationsSection";
-import NewsInsightsSection from "../components/NewsInsightsSection";
-import ClientsSection from "../components/ClientsSection";
+import HeroSection from "../components/Home/HeroSection";
+import AboutSection from "../components/Home/AboutSection";
+import ServicesSection from "../components/Home/ServicesSection";
+import WhyChooseSection from "../components/Home/WhyChooseSection";
+import CertificationsSection from "../components/Home/CertificationsSection";
+import NewsSection from "../components/Home/NewsSection";
+import ClientsSection from "../components/Home/ClientsSection";
+import StrengthSection from "../components/Home/StrengthSection";
 
 const HomePage = () => {
   return (
     <>
-      <Hero />
+      <HeroSection />
       <AboutSection />
       <ServicesSection />
-      <HomeWhyChoose />
+      <WhyChooseSection />
       <CertificationsSection />
-      <NewsInsightsSection />
+      <NewsSection />
       <ClientsSection />
+      <StrengthSection />
     </>
   );
 };

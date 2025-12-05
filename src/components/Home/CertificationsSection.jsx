@@ -1,8 +1,8 @@
-import mto from "../assets/certifications/mto.png";
-import iso from "../assets/certifications/iso.png";
-import crisil from "../assets/certifications/crisil.png";
-import iata from "../assets/certifications/iata.png";
-import aeo from "../assets/certifications/aeo.png";
+import mto from "../../assets/certifications/mto.png";
+import iso from "../../assets/certifications/iso.png";
+import crisil from "../../assets/certifications/crisil.png";
+import iata from "../../assets/certifications/iata.png";
+import aeo from "../../assets/certifications/aeo.png";
 
 const CertificationsSection = () => {
   return (

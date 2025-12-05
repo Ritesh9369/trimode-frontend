@@ -1,10 +1,10 @@
 // src/pages/ServicesPage.jsx
-import ServicesSection from "../components/ServicesSection";
-import StrengthSection from "../components/StrengthSection";
+import ServicesSection from "../components/Home/ServicesSection";
+import StrengthSection from "../components/Home/StrengthSection";
 
 const ServicesPage = () => {
   return (
-    <main className="pt-[110px]">
+    <main className="">
       <ServicesSection />
       <StrengthSection />
     </main>

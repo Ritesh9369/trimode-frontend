@@ -1,4 +1,5 @@
-import strengthImg from "../assets/srenthmainimg/strength-img.png";
+// import strengthImg from "../assets/srenthmainimg/strength-img.png";
+import strengthImg from "../../assets/srenthmainimg/strength-img.png";
 
 const features = [
   {

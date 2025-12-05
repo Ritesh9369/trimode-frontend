@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 
-import hero2 from "../assets/hero/hero-bg-7.png";
-import hero1 from "../assets/hero/hero-bg-3.png";
+import hero2 from "../../assets/hero/hero-bg-7.png";
+import hero1 from "../../assets/hero/hero-bg-3.png";
 
 
-const Hero = () => {
+const HeroSection = () => {
   
   const images = [hero1, hero2];
   const [index, setIndex] = useState(0);
@@ -94,4 +94,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HeroSection;

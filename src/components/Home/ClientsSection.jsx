@@ -1,8 +1,8 @@
-import dhl from "../assets/clients/dhl.png";
-import chr from "../assets/clients/chr.png";
-import cma from "../assets/clients/cma_cgm.png";
-import schenker from "../assets/clients/schenker.png";
-import ups from "../assets/clients/ups.png";
+import dhl from "../../assets/clients/dhl.png";
+import chr from "../../assets/clients/chr.png";
+import cma from "../../assets/clients/cma_cgm.png";
+import schenker from "../../assets/clients/schenker.png";
+import ups from "../../assets/clients/ups.png";
 
 const ClientsSection = () => {
   const logos = [dhl, chr, cma, schenker, ups];

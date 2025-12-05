@@ -1,8 +1,8 @@
-import news1 from "../assets/news/blog-1.png";
-import news2 from "../assets/news/blog-2.png";
-import news3 from "../assets/news/blog-3.png";
+import news1 from "../../assets/news/blog-1.png";
+import news2 from "../../assets/news/blog-2.png";
+import news3 from "../../assets/news/blog-3.png";
 
-const NewsInsightsSection = () => {
+const NewsSection = () => {
   const newsList = [
     {
       img: news1,
@@ -59,4 +59,4 @@ const NewsInsightsSection = () => {
   );
 };
 
-export default NewsInsightsSection;
+export default NewsSection;
